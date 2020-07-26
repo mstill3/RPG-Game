@@ -11,7 +11,7 @@ const FRICTION = 250
 var velocity = Vector2.ZERO
 
 onready var animationPlayer = $AnimationPlayer
-var animation = null
+var animation: String = "IdleRight"
 
 # Called when the node enters the scene tree for the first time.
 #func _ready():
