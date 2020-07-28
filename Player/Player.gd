@@ -5,8 +5,8 @@ extends KinematicBody2D
 # var a = 2
 # var b = "text"
 const ACCELERATION = 200
-const MAX_SPEED = 80
-const FRICTION = 250
+const MAX_SPEED = 90
+const FRICTION = 350
 
 var velocity = Vector2.ZERO
 
