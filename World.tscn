@@ -5,7 +5,7 @@
 [ext_resource path="res://Animals/Fox/Fox.tscn" type="PackedScene" id=3]
 [ext_resource path="res://World/GrassBackground.png" type="Texture" id=4]
 [ext_resource path="res://World/DirtTileset.png" type="Texture" id=5]
-[ext_resource path="res://Audio/Music/1. Day Out.wav" type="AudioStream" id=6]
+[ext_resource path="res://Audio/Music/out_and_about.wav" type="AudioStream" id=6]
 [ext_resource path="res://World.gd" type="Script" id=7]
 
 [sub_resource type="TileSet" id=1]
@@ -37,8 +37,9 @@
 script = ExtResource( 7 )
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 160, 96 )
 stream = ExtResource( 6 )
-volume_db = -10.0
+volume_db = -5.0
 autoplay = true
 area_mask = 1048575
 
@@ -48,7 +49,7 @@ centered = false
 region_enabled = true
 region_rect = Rect2( 0, 0, 320, 180 )
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="DirtPathTileMap" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
 cell_size = Vector2( 16, 16 )
 format = 1
@@ -65,18 +66,6 @@ position = Vector2( 240, 64 )
 [node name="Bush" parent="YSort" instance=ExtResource( 1 )]
 position = Vector2( 80, 24 )
 
-[node name="Bush7" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( 288, 152 )
-
-[node name="Bush8" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( 280, 40 )
-
-[node name="Bush6" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( 72, 112 )
-
-[node name="Bush5" parent="YSort" instance=ExtResource( 1 )]
-position = Vector2( 40, 160 )
-
 [node name="Bush2" parent="YSort" instance=ExtResource( 1 )]
 position = Vector2( 200, 40 )
 
@@ -85,3 +74,15 @@ position = Vector2( 128, 152 )
 
 [node name="Bush4" parent="YSort" instance=ExtResource( 1 )]
 position = Vector2( 256, 104 )
+
+[node name="Bush5" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 40, 160 )
+
+[node name="Bush6" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 72, 112 )
+
+[node name="Bush7" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 288, 152 )
+
+[node name="Bush8" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 280, 40 )
