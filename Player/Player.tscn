@@ -1,9 +1,10 @@
-[gd_scene load_steps=51 format=2]
+[gd_scene load_steps=52 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Player/Player.png" type="Texture" id=2]
 [ext_resource path="res://Hitboxes and Hurtboxes/Hitbox.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Player/SwordHitbox.gd" type="Script" id=4]
+[ext_resource path="res://Stats.tscn" type="PackedScene" id=5]
 
 [sub_resource type="CapsuleShape2D" id=45]
 radius = 4.0
@@ -640,10 +641,10 @@ anims/RunUp = SubResource( 61 )
 tree_root = SubResource( 44 )
 anim_player = NodePath("../AnimationPlayer")
 parameters/playback = SubResource( 62 )
-parameters/Attack/blend_position = Vector2( -0.00145984, 0.991416 )
-parameters/Idle/blend_position = Vector2( -0.000677943, 1.00558 )
-parameters/Roll/blend_position = Vector2( -0.464741, 0.158798 )
-parameters/Run/blend_position = Vector2( -0.384877, -0.141631 )
+parameters/Attack/blend_position = Vector2( 0, 1 )
+parameters/Idle/blend_position = Vector2( 0, 1 )
+parameters/Roll/blend_position = Vector2( 0, 1 )
+parameters/Run/blend_position = Vector2( 0, 1 )
 
 [node name="HitboxPivot" type="Position2D" parent="."]
 position = Vector2( 0, -4 )
@@ -657,5 +658,7 @@ script = ExtResource( 4 )
 [node name="CollisionShape2D" parent="HitboxPivot/SwordHitbox" index="0"]
 shape = SubResource( 63 )
 disabled = true
+
+[node name="Stats" parent="." instance=ExtResource( 5 )]
 
 [editable path="HitboxPivot/SwordHitbox"]
