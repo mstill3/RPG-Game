@@ -509,6 +509,7 @@ tile_data = PoolIntArray( -65536, 0, 65537, -65535, 0, 65538, -65534, 0, 65539, 
 [node name="CliffTileMap" type="TileMap" parent="."]
 tile_set = SubResource( 49 )
 cell_size = Vector2( 32, 32 )
+collision_mask = 0
 format = 1
 tile_data = PoolIntArray( 65544, 0, 262145, 65545, 0, 65544, 131081, 0, 131076, 196608, 0, 65540, 196617, 0, 131076, 262144, 0, 262149, 262145, 0, 262146, 262146, 0, 262147, 262153, 0, 196612 )
 
