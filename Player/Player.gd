@@ -16,6 +16,7 @@ var velocity = Vector2.ZERO
 var roll_vector = Vector2.DOWN
 var animation: String = "IdleRight"
 var state = MOVE
+var stats = PlayerStats
 
 onready var animationPlayer = $AnimationPlayer
 onready var animationTree = $AnimationTree
@@ -24,6 +25,7 @@ onready var swordHitbox = $HitboxPivot/SwordHitbox
 
 
 func _ready():
+#	stats.connect("no_health")
 	animationTree.active = true
 	swordHitbox.knockback_vector = roll_vector
 
